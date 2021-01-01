@@ -36,9 +36,11 @@ if upload_file is not None:
         
         draw = ImageDraw.Draw(img)
         draw.rectangle([(rect['left'], rect['top']), (rect['left'] + rect['height'], rect['top'] + rect['width'])],
-                    fill=None, outline='green', width=5)   
-        font = ImageFont.truetype("meiryob.ttc", size=60)
-        draw.text((rect['left'], rect['top']-70), text = label, font = font, fill = 'white')
+                    fill=None, outline='green', width=5)
+#        font = ImageFont.truetype("meiryob.ttc", size=60)
+        draw.text((rect['left'], rect['top']-70), text = label, fill = 'white')
+#        draw.text((rect['left'], rect['top']-70), text = label, font = font, fill = 'white')
+        
     st.image(img, caption='Uploaded Image', use_column_width=True)
 
 
